@@ -74,12 +74,12 @@ const start = async () => {
     try {
         await fastify.listen(PORT)
         console.log(`Server running at port ${PORT}`)
-        await sequelize.sync({ alter: true})
+        await sequelize.sync({ alter: true })
         console.log('Database Synced!');
     } catch (error) {
         fastify.log.error(error)
         process.exit(1)
-        
+
     }
 }
 
