@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "palaktiwari",
-    "password": "root",
-    "database": "sequelize_db2",
+    "username": "adarshshete",
+    "password": "adarshshete",
+    "database": "dev_sqlize_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

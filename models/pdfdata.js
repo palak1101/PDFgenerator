@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class pdfdata extends Model {
     /**
@@ -14,29 +12,27 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   pdfdata.init(
-    { 
+    {
       template_id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
-        allowNull: false
+        allowNull: false,
+        primaryKey: true,
       },
       title: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
-      htmlstring: {
+      htmlCode: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
-      tmp_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-      }
     },
     {
       sequelize,
-      tableName: 'pdfsdata',
-      modelName: 'pdfdata',
-    });
+      tableName: "pdfsdata",
+      modelName: "pdfdata",
+    }
+  );
   return pdfdata;
 };
